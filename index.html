@@ -32,6 +32,21 @@
   <link rel="mask-icon" href="logo.svg" color="#000000">
 
   <style>
+    .tech-stack img {
+      margin: 2px;
+      max-height: 24px;
+    }
+
+    .brand-txt {
+      color: #373737;
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 1.8px;
+      opacity: 60%;
+      font-weight: 600;
+      margin: 10px 20px;
+    }
+
     body {
       font-family: 'Open Sans', sans-serif;
     }
@@ -86,10 +101,7 @@
       background-color: #00c875;
     }
 
-    .brand-txt {
-      color: #373737;
-      text-transform: uppercase;
-    }
+
 
     .btn-primary {
       color: #fff;
@@ -111,8 +123,8 @@
 
     .btn-primary:disabled {
       color: #fff;
-      background-color: #33976e;
-      border-color: #33976e;
+      background-color: #00c834;
+      border-color: #00c834;
     }
 
     .base-heading {
@@ -133,7 +145,7 @@
       right: 0;
       z-index: 100;
       top: 20%;
-      width: 3px;
+      width: 1px;
       height: 50%;
       /* or 100px */
       background: rgb(228, 228, 228);
@@ -146,7 +158,7 @@
       left: 0;
       z-index: 100;
       top: 20%;
-      width: 3px;
+      width: 1px;
       height: 50%;
       /* or 100px */
       background: rgb(228, 228, 228);
@@ -163,6 +175,7 @@
     h3 {
       font-size: 22px;
       font-weight: 600 !important;
+      font-family: 'Open Sans', sans-serif;
     }
 
     h4 {
@@ -187,8 +200,8 @@
     }
 
     .profile-pic {
-      width: 200px;
-      height: 200px;
+      width: 150px;
+      height: 150px;
       border-radius: 200px;
 
     }
@@ -214,6 +227,13 @@
         font-size: 40px;
       }
 
+      .footer-logos {
+        justify-content: center;
+      }
+      .menus-1{
+        font-size: 13px;;
+      }
+
     }
 
     .st-l {
@@ -225,6 +245,51 @@
     .st-r {
       text-align: right;
       padding-right: 20px;
+    }
+
+    .background-img-1 {
+      background-image: url('images/group-2-copy-2.png');
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: 10%;
+    }
+
+    .background-img-l {
+      background-image: url('images/group-2-copy-2.png');
+      /* background-position: left; */
+      background-position: top 100px left 10px;
+      background-repeat: no-repeat;
+      background-size: 10%;
+    }
+
+    .background-img-r2 {
+      background-image: url('images/group-2-copy-2.png');
+      /* background-position: left; */
+      background-position: top 50px right 10px;
+      background-repeat: no-repeat;
+      background-size: 10%;
+    }
+
+    .background-img-r3 {
+      background-image: url('images/group-2-copy-2.png');
+      /* background-position: left; */
+      background-position: top 250px right 10px;
+      background-repeat: no-repeat;
+      background-size: 10%;
+    }
+
+    @media only screen and (min-width: 1200px) {
+      .background-img-1 {
+        margin: 0 20px;
+      }
+
+    }
+
+    .s1 {
+      /* min-height: 100vh; */
+    }
+    .close{
+      font-size: 30px;
     }
   </style>
 
@@ -279,11 +344,22 @@
                 <input type="url" class="form-control" name="website" placeholder="Website" required>
               </div>
               <div class="form-group my-3">
-                <textarea maxlength="500" name="project_brief" class="form-control"
+                <textarea  rows="7" id="messagebox" name="project_brief" class="form-control"
                   placeholder="Project brief (up to 500 words)" required></textarea>
               </div>
 
-
+              <script>
+                function checkWordCount(e) {
+                  // console.log(e.value);
+                  let s = e.value.split(" ");
+                  console.log(s.length);
+                  if (s.length > 5) {
+                    console.log("aaa")
+                    document.getElementById('messagebox').innerHTML = s.slice(0,500).join(" ")                    
+                  }
+                  return e
+                }
+              </script>
 
 
               <div class="modal-footer justify-content-center border-0">
@@ -394,40 +470,38 @@
     </script>
 
 
+    <div class="background-img-1 s1">
+      <div class="container py-3 ">
+        <header class="pb-4">
+          <div class="d-flex   py-4 px-4 mb-4 " style="justify-content: space-between;">
+            <div>
 
-    <div class="container py-3">
+              <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+                <img src="images/logo.svg" />
+              </a>
+            </div>
 
-
-
-
-
-
-      <header>
-        <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 ">
-          <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
-            <img src="images/logo.svg" />
-          </a>
-
-          <nav class="d-inline-flex mt-4 mt-md-0 ms-md-auto">
-            <a class="me-4 py-2 text-dark text-decoration-none" href="#pricing">Pricing</a>
-            <a class="me-4 py-2 text-dark text-decoration-none" href="#howitworks">How it works</a>
-            <a class="py-2 text-dark text-decoration-none" href="#aboutus">About us</a>
-          </nav>
-        </div>
-
-        <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-          <h1 class="display-4  base-title">Fully customized SaaS apps</h1>
-          <p class="fs-5 text-muted base-light-font">Drive growth for your business</p>
-          <div class="input-group mb-4 mb-4 mx-auto" style="max-width:360px">
-            <input type="text" v-model="emailGetStarted" @keyup="validateEmail" class="form-control" placeholder=""
-              aria-label="" aria-describedby="button-addon2">
-            <button :disabled="!isValidEmail" class="btn btn-primary" type="button" id="button-addon2"
-              data-bs-toggle="modal" data-bs-target="#sendQueryModal">Get Started</button>
+            <nav class="mt-4  ms-md-auto">
+              <a class="me-3 m-md-4  py-2 text-dark text-decoration-none menus-1" href="#pricing">Pricing</a>
+              <a class="me-3 m-md-4 py-2 text-dark text-decoration-none menus-1" href="#howitworks">How it works</a>
+              <a class="py-2 text-dark text-decoration-none menus-1" href="#aboutus">About us</a>
+            </nav>
           </div>
-        </div>
-      </header>
+
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4  base-title">Fully customized SaaS apps</h1>
+            <p class=" text-muted base-light-font">Drive growth for your business</p>
+            <div class="input-group my-4  pt-4 mx-auto" style="max-width:440px">
+              <input type="text" v-model="emailGetStarted" @keyup="validateEmail" style="height:50px;"
+                class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
+              <button :disabled="!isValidEmail" class="btn btn-primary px-4" type="button" id="button-addon2"
+                data-bs-toggle="modal" data-bs-target="#sendQueryModal">Get Started</button>
+            </div>
+          </div>
+        </header>
+      </div>
     </div>
-    <div style="background-color: #fafafa;">
+    <div style="background-color: #fafafa;" class="mt-4 py-4">
       <div class="container py-3">
         <main>
           <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
@@ -478,177 +552,174 @@
 
       </div>
     </div>
+    <div class="background-img-r3">
+      <div class="container py-3 ">
+        <div class="mx-auto text-center pt-4 mt-4">
 
-    <div class="container py-3">
-      <div class="mx-auto text-center pt-4 mt-4">
+          <h2 class="base-sec-heading mb-4 pb-4">Trusted by top funded Startups & Enterprise customers</h2>
+          <div class="mb-4 pb-4 mx-auto d-flex " style="justify-content: center;">
+            <div class="mx-3 mx-lg-5  my-4">
+              <img src="images/cars-24.png" class="img-fluid mt-4" />
+            </div>
+            <div class="mx-3 mx-lg-5 my-4">
+              <img src="images/ison.png" class="img-fluid mt-4" />
+            </div>
+            <div class="mx-3 mx-lg-5 my-4">
+              <img src="images/ciitizen.png" class="img-fluid mt-4" style="margin-top:-20px;" />
+            </div>
+          </div>
+          <h2 class="base-sec-heading mt-4 pt-4" id="howitworks">How it works</h2>
 
-        <h2 class="base-sec-heading mb-4 pb-4">Trusted by top funded Startups & Enterprise customers</h2>
-        <div style="display: flex;justify-content: center;flex-wrap: wrap;" class="mb-4 pb-4">
-          <img src="images/cars24.png" style="margin: 20px;" />
-          <img src="images/ison.webp" style="margin: 30px 20px 20px 20px ;" />
-          <img src="images/ciitizen.png" style="margin: 20px;" />
+
+
+
+          <div class="stepper d-flex flex-column mt-5 ml-2">
+
+
+
+            <div class="d-flex mb-1">
+              <div class="d-flex flex-column pr-4 align-items-center w-100">
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center">
+                <div class="line h-100"></div>
+              </div>
+              <div class="w-100">
+                <h5 class="text-dark"></h5>
+                <p class="lead text-muted pb-3" style="height:20px"></p>
+              </div>
+            </div>
+
+
+            <div class="d-flex mb-1">
+              <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center">
+                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">1</div>
+                <div class="line h-100"></div>
+              </div>
+              <div class="w-100 st-l">
+                <h5 class="text-dark">Choose Plan <br />Team size</h5>
+                <p class="lead text-muted pb-3"></p>
+
+              </div>
+            </div>
+
+
+            <div class="d-flex mb-1">
+
+              <div class="w-100 st-r">
+                <h5 class="text-dark">Day 1</h5>
+                <p class="lead text-muted pb-3">Onboarding call</p>
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center">
+                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">2</div>
+                <div class="line h-100"></div>
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
+              </div>
+            </div>
+
+
+
+
+
+            <div class="d-flex mb-1">
+              <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center">
+                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">3</div>
+                <div class="line h-100"></div>
+              </div>
+              <div class="w-100 st-l">
+                <h5 class="text-dark">Week 1</h5>
+                <p class="lead text-muted pb-3">Scope document</p>
+              </div>
+            </div>
+
+
+            <div class="d-flex mb-1">
+
+              <div class="w-100 st-r">
+                <h5 class="text-dark">Week 2-6</h5>
+                <p class="lead text-muted pb-3">SaaS MVP version 1</p>
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center">
+                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">4</div>
+                <div class="line h-100"></div>
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
+              </div>
+            </div>
+
+            <div class="d-flex mb-1">
+              <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center">
+                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">5</div>
+                <div class="line h-100"></div>
+              </div>
+              <div class="w-100 st-l">
+                <h5 class="text-dark">Week 7-8</h5>
+                <p class="lead text-muted pb-3">Feedback / iterations</p>
+              </div>
+            </div>
+
+
+            <div class="d-flex mb-1">
+
+              <div class="w-100 st-r">
+                <h5 class="text-dark">Week 9-10 onwards</h5>
+                <p class="lead text-muted pb-3">Start using your custom SaaS product</p>
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center">
+                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">6</div>
+                <div class="line h-100"></div>
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
+              </div>
+            </div>
+
+            <div class="d-flex mb-1">
+              <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
+              </div>
+              <div class="d-flex flex-column pr-4 align-items-center">
+                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">7</div>
+                <div class="line h-100"></div>
+              </div>
+              <div class="w-100 st-l">
+                <h5 class="text-dark">Week> 10</h5>
+                <p class="lead text-muted pb-3">Work with your team to evolve your SaaS app to meet your need</p>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
-        <h2 class="base-sec-heading mt-4 pt-4" id="howitworks">How it works</h2>
-        <!-- <div style="display: flex;border:1px solid #000;background-color: red;justify-content: center;">
-        <div style="background-color: royalblue;">a</div>
-        <div class="oval">1</div>
-        <div style="text-align: left;">Choose Plan<br/>
-          Team size</div>
-      </div>
-      <div style="display: flex;background-color: red;justify-content: center;">
-        <div>Day 1</div>
-        <div class="oval">2</div>
-        <div style="text-align: left;"><br/>
-          Team size</div>
-      </div> -->
-
-
-
-        <div class="stepper d-flex flex-column mt-5 ml-2">
-
-
-
-          <div class="d-flex mb-1">
-            <div class="d-flex flex-column pr-4 align-items-center w-100">
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="line h-100"></div>
-            </div>
-            <div class="w-100">
-              <h5 class="text-dark"></h5>
-              <p class="lead text-muted pb-3" style="height:20px"></p>
-            </div>
-          </div>
-
-
-          <div class="d-flex mb-1">
-            <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">1</div>
-              <div class="line h-100"></div>
-            </div>
-            <div class="w-100 st-l">
-              <h5 class="text-dark">Choose Plan</h5>
-              <p class="lead text-muted pb-3">Team size</p>
-            </div>
-          </div>
-
-
-          <div class="d-flex mb-1">
-
-            <div class="w-100 st-r">
-              <h5 class="text-dark">Day 1</h5>
-              <p class="lead text-muted pb-3">Onboarding call</p>
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">2</div>
-              <div class="line h-100"></div>
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
-            </div>
-          </div>
-
-
-
-
-
-          <div class="d-flex mb-1">
-            <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">3</div>
-              <div class="line h-100"></div>
-            </div>
-            <div class="w-100 st-l">
-              <h5 class="text-dark">Week 1</h5>
-              <p class="lead text-muted pb-3">Scope document</p>
-            </div>
-          </div>
-
-
-          <div class="d-flex mb-1">
-
-            <div class="w-100 st-r">
-              <h5 class="text-dark">Week 2-6</h5>
-              <p class="lead text-muted pb-3">SaaS MVP version 1</p>
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">4</div>
-              <div class="line h-100"></div>
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
-            </div>
-          </div>
-
-          <div class="d-flex mb-1">
-            <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">5</div>
-              <div class="line h-100"></div>
-            </div>
-            <div class="w-100 st-l">
-              <h5 class="text-dark">Week 7-8</h5>
-              <p class="lead text-muted pb-3">Feedback / iterations</p>
-            </div>
-          </div>
-
-
-          <div class="d-flex mb-1">
-
-            <div class="w-100 st-r">
-              <h5 class="text-dark">Week 9-10 onwards</h5>
-              <p class="lead text-muted pb-3">Start using your custom SaaS product</p>
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">6</div>
-              <div class="line h-100"></div>
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
-            </div>
-          </div>
-
-          <div class="d-flex mb-1">
-            <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
-            </div>
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">7</div>
-              <div class="line h-100"></div>
-            </div>
-            <div class="w-100 st-l">
-              <h5 class="text-dark">Week> 10</h5>
-              <p class="lead text-muted pb-3">Work with your team to evolve your SaaS app to meet your need</p>
-            </div>
-          </div>
-
-
-
-
-
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
     </div>
 
@@ -659,8 +730,7 @@
 
 
 
-
-    <div style="background-color: #fafafa;">
+    <div style="background-color: #fafafa;" class="background-img-l pb-4">
       <div class="container py-3 mt-4 pt-4">
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center pt-4">
           <h2 class="display-4  base-sec-heading">Our Technology Stack</h2>
@@ -669,8 +739,92 @@
           </p>
         </div>
       </div>
-      <div class="container" style="padding:0px;">
-        <img src="images/partners.png" style="width:100%;" class="mx-auto;" />
+      <div class="container tech-stack pb-4"
+        style="padding:0px;display:flex;flex-wrap:wrap;justify-content: center;align-items: center;">
+        <span class="brand-txt">cloud infrastruture</span>
+        <img src="images/aws.png" />
+        <span class="brand-txt">Server Orchestration</span>
+        <img src="images/kuber.png" />
+        <span class="brand-txt">Messaging Bus</span>
+        <img src="images/kafka.png" />
+        <span class="brand-txt">Real-time communication</span>
+        <img src="images/deep-stream-io.png" />
+        <img src="images/socketcluster.png" />
+
+        <span class="brand-txt">Real-time database</span>
+        <img src="images/supabase.png" />
+        <span class="brand-txt">Search</span>
+        <img src="images/elasticsearch.png" />
+        <img src="images/typesense.png" />
+
+        <span class="brand-txt">Database</span>
+        <img src="images/postgre-sql.png" />
+        <img src="images/mongo-db.png" />
+        <img src="images/redis.png" />
+        <img src="images/hasura.png" />
+
+        <span class="brand-txt">analytics</span>
+        <img src="images/posthog-logo.png" />
+        <img src="images/plausible.png" />
+
+        <span class="brand-txt">CMS</span>
+        <img src="images/strapi.png" />
+        <img src="images/ghost.png" />
+        <img src="images/keystonejs.png" />
+        <span class="brand-txt">CRM</span>
+        <img src="images/zoho.png" />
+        <span class="brand-txt">EMAIL</span>
+        <img src="images/amazon-ses.png" />
+        <img src="images/sendgrid.png" />
+        <span class="brand-txt">SMS Voice</span>
+        <img src="images/twilio.png" />
+        <span class="brand-txt">Payments</span>
+        <img src="images/stripe.png" />
+
+        <span class="brand-txt">custom apps</span>
+        <img src="images/nextless.png" />
+
+        <span class="brand-txt">Workflow Management</span>
+        <img src="images/n-8-n.png" />
+        <img src="images/zapier.png" />
+
+        <span class="brand-txt">ecommerce</span>
+
+        <img src="images/snipcart.png" />
+        <img src="images/mailchimp-opensource.png" />
+
+        <span class="brand-txt">Documents</span>
+        <img src="images/google-workspace.png" />
+        <img src="images/sheetjs.png" />
+
+        <span class="brand-txt">Mobile</span>
+        <img src="images/react.png" />
+        <img src="images/flutter.png" />
+        <span class="brand-txt">Serverless</span>
+
+        <img src="images/lambda.png" />
+        <img src="images/openfaas.png" />
+
+        <span class="brand-txt">File Storage</span>
+        <img src="images/cloudinary.png" />
+        <img src="images/s-3.png" />
+
+        <span class="brand-txt">business intelligence</span>
+        <img src="images/metabase.png" />
+        <span class="brand-txt">customer data platform</span>
+        <img src="images/rudderstack.png" />
+
+        <span class="brand-txt">user management</span>
+        <img src="images/auth-0.png" />
+        <img src="images/supertokens.png" />
+
+        <span class="brand-txt">chatbots</span>
+        <img src="images/dialogflow.png" />
+        <span class="brand-txt">ai/ml</span>
+        <img src="images/pytorch.png" />
+        <img src="images/tensorflow.png" />
+
+        <!-- <img src="images/partners.png" style="width:100%;" class="mx-auto;" /> -->
       </div>
     </div>
 
@@ -685,8 +839,8 @@
 
 
 
-    <div style="background-color: #fff;">
-      <div class="container py-3">
+    <div style="background-color: #fff;" class="background-img-r2">
+      <div class="container py-5">
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
           <h1 class="display-4 base-sec-heading" id="pricing">Pricing</h1>
         </div>
@@ -697,25 +851,22 @@
 
           <div class="col" style="min-width:200px">
             <div class="card mb-4 rounded-3 shadow ">
-              <div class="card-header py-3 bg-white border-0">
+              <div class="card-header py-4 bg-white border-1">
                 <h3 class="my-0 mb-2  ">MICRO</h3>
-                <h4 class="card-title"><small class="text-muted fw-light">$10k / month</small></h4>
-                <h5>180-200 hours</h5>
+                <h4 class="card-title"><small class="text-muted fw-normal">$10k / month</small></h4>
+                <h5 class="mt-1">180-200 hours</h5>
               </div>
-              <div class="card-body pt-0">
-                <ul class="list-unstyled base-plan-text  mb-4">
-                  <li>2 full-stack devs <br />
-                    + <br />
-                    1 Product Manager<br />
-                    +<br />
-                    1 Designer<br /><br /><br />
-                    <br />
-                    <br />
-
-                  </li>
-
-                </ul>
-                <button type="button" @click="planSelected = 'Micro'" class="mt-4 w-100 btn btn-lg btn-primary"
+              <div class="card-body pt-0"
+                style="flex-direction: column;display: flex;align-items: center;justify-content: center;">
+                <div class="base-plan-text"
+                  style="justify-content: center;padding-top:20px;display: flex;height:200px;">
+                  2 full-stack devs<br />
+                  +<br />
+                  1 Product Manager<br />
+                  +<br />
+                  1 Designer
+                </div>
+                <button type="button" @click="planSelected = 'Micro'" class="mt-4 px-5 btn btn-lg btn-primary"
                   data-bs-toggle="modal" data-bs-target="#sendQueryModal">Select</button>
               </div>
             </div>
@@ -724,71 +875,54 @@
 
           <div class="col" style="min-width:200px">
             <div class="card mb-4 rounded-3 shadow ">
-              <div class="card-header py-3 bg-white border-0">
+              <div class="card-header py-4 bg-white border-1">
                 <h3 class="my-0 mb-2  ">MOBILITY</h3>
-                <h4 class="card-title"><small class="text-muted fw-light">$15k / month</small></h4>
-                <h5>250-300 hours</h5>
-
-
+                <h4 class="card-title"><small class="text-muted fw-normal">$15k / month</small></h4>
+                <h5 class="mt-1">250-300 hours</h5>
               </div>
-              <div class="card-body pt-0">
-                <ul class="list-unstyled base-plan-text  mb-4">
-                  <li>
-                    2 full-stack devs <br />
-                    + <br />
-                    1 mobile dev<br />
-                    +<br />
-                    1 Product Manager<br />
-                    +<br />
-                    1 Designer
-                    <br />
-                    <br />
-                    <br />
-
-                  </li>
-
-                </ul>
-                <button type="button" @click="planSelected = 'Mobility'" class="mt-4  w-100 btn btn-lg btn-primary"
+              <div class="card-body pt-0"
+                style="flex-direction: column;display: flex;align-items: center;justify-content: center;">
+                <div class="base-plan-text"
+                  style="justify-content: center;padding-top:20px;display: flex;height:200px;">
+                  2 full-stack devs <br />
+                  + <br />
+                  1 mobile dev<br />
+                  +<br />
+                  1 Product Manager<br />
+                  +<br />
+                  1 Designer
+                </div>
+                <button type="button" @click="planSelected = 'Mobility'" class="mt-4 px-5 btn btn-lg btn-primary"
                   data-bs-toggle="modal" data-bs-target="#sendQueryModal">Select</button>
               </div>
             </div>
           </div>
-
 
 
           <div class="col" style="min-width:200px">
             <div class="card mb-4 rounded-3 shadow ">
-              <div class="card-header py-3 bg-white border-0">
+              <div class="card-header py-4 bg-white border-1">
                 <h3 class="my-0 mb-2  ">GROWTH</h3>
-                <h4 class="card-title"><small class="text-muted fw-light">$25k / month</small></h4>
-                <h5>450-500 hours</h5>
+                <h4 class="card-title"><small class="text-muted fw-normal">$25k / month</small></h4>
+                <h5 class="mt-1">450-500 hours</h5>
               </div>
-              <div class="card-body pt-0">
-                <ul class="list-unstyled base-plan-text  mb-4">
-                  <li>
-                    3 full-stack devs <br />
-                    + <br />
-                    1 mobile dev<br />
-                    +<br />
-                    1 Product Manager<br />
-                    +<br />
-                    1 Designer<br />
-                    +<br />
-                    1 QA
-
-                  </li>
-
-                </ul>
-                <button type="button" @click="planSelected = 'Growth'" class="mt-4 w-100 btn btn-lg btn-primary"
+              <div class="card-body pt-0"
+                style="flex-direction: column;display: flex;align-items: center;justify-content: center;">
+                <div class="base-plan-text"
+                  style="justify-content: center;padding-top:20px;display: flex;height:200px;">
+                  3 full-stack devs <br />
+                  + <br />
+                  1 mobile dev<br />
+                  +<br />
+                  1 Product Manager<br />
+                  +<br />
+                  1 Designer + 1 QA
+                </div>
+                <button type="button" @click="planSelected = 'Growth'" class="mt-4 px-5 btn btn-lg btn-primary"
                   data-bs-toggle="modal" data-bs-target="#sendQueryModal">Select</button>
               </div>
             </div>
           </div>
-
-
-
-
-
 
         </div>
 
@@ -820,7 +954,10 @@
         <p class=" text-muted mt-4 pt-4 pb-4 mb-4" style="font-size:18px;">
           BASE is a custom SaaS apps service provided by <a href="http://gluelabs.com/" target="_blank">Glue Labs</a>.
         </p>
-
+        <p style="opacity: 80%;">Glue Labs is a fully distributed team of developers who have built SaaS apps for the
+          world’s top VC
+          funded
+          startups and also for 10,000 people plus large enterprise customers.</p>
 
         <div style="display: flex;" class="mt-4">
           <div style=" display:flex;align-items: center;flex-direction: column;">
@@ -834,9 +971,7 @@
             </div>
           </div>
           <div style="text-align: left;margin-left:20px;opacity: 80%;">
-            <p>Glue Labs is a fully distributed team of developers who have built SaaS apps for the world’s top VC
-              funded
-              startups and also for 10,000 people plus large enterprise customers.</p>
+
             <p>Glue Labs is led by our founder, Vishal Chandra. He is an alumni from IIT Delhi and a serial tech
               entrepreneur
               with a keen love for technology. His first startup was into wireless hardware tech and developed one of
@@ -857,10 +992,21 @@
         <footer>
           <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 ">
             <div class="footer-mob">
-              <span style="opacity: 80%;">Powered by </span>
-              <a href="/" class="footer-mob mt-4 d-flex align-items-center text-dark ">
-                <img class="footer-mob" src="images/glelabs.svg" />
-              </a>
+
+              <div style="display: flex; " class="footer-logos">
+                <div>
+                  <div style="height:25px;"></div>
+                  <a href="#"> <img class="footer-mob" src="images/logo.svg" style="height:57px" /></a>
+
+                </div>
+                <div style="margin-left:10px;">
+                  <div style="height:25px;opacity: 60%;font-size:14px;">Powered by </div>
+                  <a href="https://gluelabs.com/"><img class="footer-mob" src="images/glelabs.svg"
+                      style="height:40px" /></a>
+
+                </div>
+              </div>
+
               <div class="mt-4" style="opacity: 80%;">
                 2021 Glue Labs Private Limited. All rights reserved.
               </div>
