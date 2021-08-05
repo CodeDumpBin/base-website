@@ -8,6 +8,19 @@
   <meta name="author" content="Glue Labs">
   <meta name="generator" content="Glue labs">
   <title>Base </title>
+  <meta name="description" content="SaaS apps service provided by Glue Labs" />
+  <meta name="keywords" content="SaaS," />
+
+
+  <meta property="og:title" content="Base">
+  <meta property="og:description" content="SaaS apps service provided by Glue Labs">
+  <meta property="og:image" content="images/partners.png">
+  <meta property="og:url" content="/">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta property="og:site_name" content="Base">
+  <meta name="twitter:image:alt" content="Base">
+
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -22,6 +35,7 @@
     })();
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,269 +43,26 @@
     rel="stylesheet">
 
   <link rel="icon" href="logo.svg">
-  <link rel="mask-icon" href="logo.svg" color="#000000">
+  <link rel="mask-icon" href="logo.svg" color="#00c875">
 
-  <style>
-    .tech-stack img {
-      margin: 2px;
-      max-height: 24px;
-    }
+  <link rel="apple-touch-icon" sizes="57x57" href="images/fav/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/fav/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/fav/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/fav/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/fav/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/fav/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/fav/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/fav/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/fav/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/fav/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/fav/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/fav/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/fav/favicon-16x16.png">
+  <link rel="manifest" href="images/fav/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="images/fav/ms-icon-144x144.png">
+  <meta name="theme-color" content="#00c875">
 
-    .brand-txt {
-      color: #373737;
-      text-transform: uppercase;
-      font-size: 15px;
-      letter-spacing: 1.8px;
-      opacity: 60%;
-      font-weight: 600;
-      margin: 10px 20px;
-    }
-
-    body {
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    .base-title {
-      font-weight: 800 !important;
-      font-size: 60px;
-    }
-
-    .base-light-font {
-      font-weight: 100;
-      font-size: 30px;
-    }
-
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-
-    .oval {
-      width: 40px;
-      height: 40px;
-      border-radius: 40px;
-      ;
-      margin: 80px 24px 60px;
-      padding: 6.5px 14px;
-      background-color: #00c875;
-
-    }
-
-    .line {
-      width: 1px;
-      background-color: #00c875;
-    }
-
-    .stepper {}
-
-    .lead {
-      font-size: 1.1rem;
-    }
-
-    .bg-step {
-      background-color: #00c875;
-    }
-
-
-
-    .btn-primary {
-      color: #fff;
-      background-color: #00c875;
-      border-color: #00c875;
-    }
-
-    .btn-primary:hover {
-      color: #fff;
-      background-color: #02a762;
-      border-color: #02a762;
-    }
-
-    .btn-primary:focus {
-      color: #fff;
-      background-color: #028850;
-      border-color: #028850;
-    }
-
-    .btn-primary:disabled {
-      color: #fff;
-      background-color: #00c834;
-      border-color: #00c834;
-    }
-
-    .base-heading {
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .base-color-light {
-      color: #373737 !important;
-      font-size: 18px;
-      opacity: 0.8;
-    }
-
-
-    .border-biz:after {
-      content: "";
-      position: absolute;
-      right: 0;
-      z-index: 100;
-      top: 20%;
-      width: 1px;
-      height: 50%;
-      /* or 100px */
-      background: rgb(228, 228, 228);
-      border: 1px solid rgb(228, 228, 228)
-    }
-
-    .border-biz:before {
-      content: "";
-      position: absolute;
-      left: 0;
-      z-index: 100;
-      top: 20%;
-      width: 1px;
-      height: 50%;
-      /* or 100px */
-      background: rgb(228, 228, 228);
-      border: 1px solid rgb(228, 228, 228)
-    }
-
-    .base-sec-heading {
-      font-size: 32px;
-      font-weight: 700;
-    }
-
-    .base-sec-heading {}
-
-    h3 {
-      font-size: 22px;
-      font-weight: 600 !important;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    h4 {
-      font-size: 22px;
-      font-weight: 600 !important;
-    }
-
-    .base-plan-text {
-      opacity: 80%;
-    }
-
-    h5 {
-      font-size: 16px;
-      font-weight: 600;
-    }
-
-    ol li {
-      padding-left: 20px;
-      opacity: 80%;
-      line-height: 30px;
-      font-size: 16px !important;
-    }
-
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 200px;
-
-    }
-
-    @media only screen and (max-width: 760px) {
-      .footer-mob {
-        text-align: center;
-        margin: 0 auto;
-      }
-
-    }
-
-    @media only screen and (max-width: 600px) {
-      .profile-pic {
-        width: 100px;
-        height: 100px;
-        border-radius: 100px;
-
-      }
-
-      .base-title {
-
-        font-size: 40px;
-      }
-
-      .footer-logos {
-        justify-content: center;
-      }
-      .menus-1{
-        font-size: 13px;;
-      }
-
-    }
-
-    .st-l {
-      text-align: left;
-      padding-left: 20px;
-
-    }
-
-    .st-r {
-      text-align: right;
-      padding-right: 20px;
-    }
-
-    .background-img-1 {
-      background-image: url('images/group-2-copy-2.png');
-      background-position: right;
-      background-repeat: no-repeat;
-      background-size: 10%;
-    }
-
-    .background-img-l {
-      background-image: url('images/group-2-copy-2.png');
-      /* background-position: left; */
-      background-position: top 100px left 10px;
-      background-repeat: no-repeat;
-      background-size: 10%;
-    }
-
-    .background-img-r2 {
-      background-image: url('images/group-2-copy-2.png');
-      /* background-position: left; */
-      background-position: top 50px right 10px;
-      background-repeat: no-repeat;
-      background-size: 10%;
-    }
-
-    .background-img-r3 {
-      background-image: url('images/group-2-copy-2.png');
-      /* background-position: left; */
-      background-position: top 250px right 10px;
-      background-repeat: no-repeat;
-      background-size: 10%;
-    }
-
-    @media only screen and (min-width: 1200px) {
-      .background-img-1 {
-        margin: 0 20px;
-      }
-
-    }
-
-    .s1 {
-      /* min-height: 100vh; */
-    }
-    .close{
-      font-size: 30px;
-    }
-  </style>
 
   <link href="css/pricing.css" rel="stylesheet">
 
@@ -321,7 +92,7 @@
             <form class="needs-validation" id="base-form" novalidate @submit="checkForm">
               <div class="form-group my-3">
                 <input type="email" name="email" v-model="emailGetStarted" class="form-control"
-                  id="exampleFormControlInput1" placeholder="Enter email address" required>
+                  id="exampleFormControlInput1" placeholder="Enter email address *" required>
               </div>
               <div class="form-group my-3">
                 <select class="form-select" required name="plan">
@@ -332,20 +103,24 @@
                 </select>
               </div>
               <div class="form-group my-3">
-                <input type="text" class="form-control" name="name" placeholder="Your full name" required>
+                <input type="text" class="form-control" name="name" placeholder="Your full name *" required>
               </div>
               <div class="form-group my-3">
-                <input type="text" class="form-control" name="designation" placeholder="Designation" required>
+                <input type="text" class="form-control" name="designation" placeholder="Designation *" required>
               </div>
               <div class="form-group my-3">
-                <input type="text" class="form-control" name="organisation" placeholder="Organisation name" required>
+                <input type="text" class="form-control" name="organisation" placeholder="Organisation name *" required>
               </div>
               <div class="form-group my-3">
-                <input type="url" class="form-control" name="website" placeholder="Website" required>
+                <input type="url" class="form-control" name="website" placeholder="Website *" required>
               </div>
-              <div class="form-group my-3">
-                <textarea  rows="7" id="messagebox" name="project_brief" class="form-control"
-                  placeholder="Project brief (up to 500 words)" required></textarea>
+
+              <div class="form-group my-3" style="position: relative;">
+                <textarea rows="7" id="messagebox" name="project_brief" class="form-control"
+                  placeholder="Project brief (up to 500 words) *" required></textarea>
+                <!-- <div
+                  style="font-size:11px;position:absolute;right:0px;bottom:-30px;background-color: #00c834;color:#fff;border-radius:50px;width:30px;line-height:30px;text-align: center;">
+                  1000</div> -->
               </div>
 
               <script>
@@ -355,7 +130,7 @@
                   console.log(s.length);
                   if (s.length > 5) {
                     console.log("aaa")
-                    document.getElementById('messagebox').innerHTML = s.slice(0,500).join(" ")                    
+                    document.getElementById('messagebox').innerHTML = s.slice(0, 500).join(" ")
                   }
                   return e
                 }
@@ -364,6 +139,7 @@
 
               <div class="modal-footer justify-content-center border-0">
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="g-recaptcha" data-sitekey="6Ld1Mt4bAAAAACQF-Krc079TYvaaWDTyc4MABQqi"></div>
 
               </div>
 
@@ -429,6 +205,7 @@
         if (form.checkValidity()) {
 
           let thankyou = document.getElementById('thankyouModal');
+
           var templateParams = {
             email: document.getElementsByName('email')[0].value,
             plan: document.getElementsByName('plan')[0].value,
@@ -470,6 +247,7 @@
     </script>
 
 
+
     <div class="background-img-1 s1">
       <div class="container py-3 ">
         <header class="pb-4">
@@ -481,74 +259,71 @@
               </a>
             </div>
 
-            <nav class="mt-4  ms-md-auto">
+            <nav class="  ms-md-auto">
               <a class="me-3 m-md-4  py-2 text-dark text-decoration-none menus-1" href="#pricing">Pricing</a>
               <a class="me-3 m-md-4 py-2 text-dark text-decoration-none menus-1" href="#howitworks">How it works</a>
-              <a class="py-2 text-dark text-decoration-none menus-1" href="#aboutus">About us</a>
+              <a class="me-3 m-md-4 py-2 text-dark text-decoration-none menus-1" href="#aboutus">About us</a>
             </nav>
           </div>
 
           <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-            <h1 class="display-4  base-title">Fully customized SaaS apps</h1>
+            <h1 class="base-title mx-auto">Fully customized SaaS apps</h1>
             <p class=" text-muted base-light-font">Drive growth for your business</p>
             <div class="input-group my-4  pt-4 mx-auto" style="max-width:440px">
               <input type="text" v-model="emailGetStarted" @keyup="validateEmail" style="height:50px;"
-                class="form-control" placeholder="" aria-label="" aria-describedby="button-addon2">
-              <button :disabled="!isValidEmail" class="btn btn-primary px-4" type="button" id="button-addon2"
-                data-bs-toggle="modal" data-bs-target="#sendQueryModal">Get Started</button>
+                class="form-control" placeholder="Enter email address" aria-label="" aria-describedby="button-addon2">
+              <button class="btn btn-primary px-4" type="button" id="button-addon2" data-bs-toggle="modal"
+                data-bs-target="#sendQueryModal">Get Started</button>
             </div>
           </div>
         </header>
       </div>
     </div>
-    <div style="background-color: #fafafa;" class="mt-4 py-4">
-      <div class="container py-3">
-        <main>
-          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
-            <div class="col">
-              <div class="card mb-4 rounded-3 border-0" style="background-color: transparent !important;">
-                <div class="card-body">
-                  <img src="images/business.png" />
-                  <div class="base-heading mt-3 mb-4">Meet your business needs</div>
-                  <p class="base-color-light">Standard SaaS offerings do not fully meet your business needs and
-                    workflows.
-                  </p>
-                  <p class="base-color-light">Custom SaaS apps will optimize for your needs and team productivity.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col border-biz" style="position: relative;">
+    <div style="background-color: #fafafa;" class="mt-4 pt-5">
+      <div class="container ">
 
-              <div class="card mb-4 rounded-3 border-0" style="background-color: transparent !important;">
-                <div class="card-body">
-                  <img src="images/fast.png" />
-                  <div class="base-heading mt-3 mb-4">Fast time to go live</div>
-                  <p class="base-color-light">Developing software from scratch takes time. We leverage ready to
-                    integrate
-                    and open source
-                    technology stack to go live faster</p>
-                  <p class="base-color-light">All apps are fully adaptable to future needs.</p>
-                </div>
+        <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+          <div class="col">
+            <div class="card mb-4 rounded-3 border-0" style="background-color: transparent !important;">
+              <div class="card-body">
+                <img src="images/business.png" />
+                <div class="base-heading mt-3 mb-4">Meet your business needs</div>
+                <p class="base-color-light">Standard SaaS offerings do not fully meet your business needs and
+                  workflows.
+                </p>
+                <p class="base-color-light">Custom SaaS apps will optimize for your needs and team productivity.</p>
               </div>
             </div>
-            <div class="col">
-              <div class="card mb-4 rounded-3 border-0" style="background-color: transparent !important;">
-                <div class="card-body">
-                  <img src="images/growth.png" />
-                  <div class="base-heading mt-3 mb-4">Scales with your growth</div>
-                  <p class="base-color-light">We have different plans to scale with your needs and growth.</p>
-                  <p class="base-color-light">Start with a micro-product team and grow team size or engage parallel
-                    teams
-                    for different use cases.
-                  </p>
-                </div>
-              </div>
-            </div>
+          </div>
+          <div class="col border-biz" style="position: relative;">
 
+            <div class="card mb-4 rounded-3 border-0" style="background-color: transparent !important;">
+              <div class="card-body">
+                <img src="images/fast.png" />
+                <div class="base-heading mt-3 mb-4">Fast time to go live</div>
+                <p class="base-color-light">Developing software from scratch takes time. We leverage ready to
+                  integrate
+                  and open source
+                  technology stack to go live faster</p>
+                <p class="base-color-light">All apps are fully adaptable to future needs.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card mb-4 rounded-3 border-0" style="background-color: transparent !important;">
+              <div class="card-body">
+                <img src="images/growth.png" />
+                <div class="base-heading mt-3 mb-4">Scales with your growth</div>
+                <p class="base-color-light">We have different plans to scale with your needs and growth.</p>
+                <p class="base-color-light">Start with a micro-product team and grow team size or engage parallel
+                  teams
+                  for different use cases.
+                </p>
+              </div>
+            </div>
           </div>
 
-
-        </main>
+        </div>
 
       </div>
     </div>
@@ -556,152 +331,167 @@
       <div class="container py-3 ">
         <div class="mx-auto text-center pt-4 mt-4">
 
-          <h2 class="base-sec-heading mb-4 pb-4">Trusted by top funded Startups & Enterprise customers</h2>
-          <div class="mb-4 pb-4 mx-auto d-flex " style="justify-content: center;">
-            <div class="mx-3 mx-lg-5  my-4">
-              <img src="images/cars-24.png" class="img-fluid mt-4" />
+          <h2 class="base-sec-heading">Trusted by top funded Startups & Enterprise customers</h2>
+          <div class="above-600 mb-4  mx-auto d-flex " style="justify-content: center;max-width: 700px;">
+            <div class="mx-4 mx-lg-4   my-4" style="max-height:50px;min-width: 100px;">
+              <a href="https://cars24.com/" target="_blank"><img src="images/cars-24.jpg" class="img-fluid mt-4" /></a>
             </div>
-            <div class="mx-3 mx-lg-5 my-4">
-              <img src="images/ison.png" class="img-fluid mt-4" />
+            <div class="mx-4 mx-lg-4  my-4" style="max-height:50px;min-width: 100px;">
+              <a href="https://isonxperiences.com/" target="_blank"><img src="images/ison.jpg"
+                  class="img-fluid mt-4" /></a>
             </div>
-            <div class="mx-3 mx-lg-5 my-4">
-              <img src="images/ciitizen.png" class="img-fluid mt-4" style="margin-top:-20px;" />
+            <div class="mx-4 mx-lg-4  my-4" style="max-height:40px;min-width: 100px;">
+              <a href="https://ciitizen.com" target="_blank"><img src="images/ciitizen.jpg"
+                  class="img-fluid mt-3" /></a>
             </div>
           </div>
-          <h2 class="base-sec-heading mt-4 pt-4" id="howitworks">How it works</h2>
-
-
-
-
-          <div class="stepper d-flex flex-column mt-5 ml-2">
-
-
-
-            <div class="d-flex mb-1">
-              <div class="d-flex flex-column pr-4 align-items-center w-100">
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center">
-                <div class="line h-100"></div>
-              </div>
-              <div class="w-100">
-                <h5 class="text-dark"></h5>
-                <p class="lead text-muted pb-3" style="height:20px"></p>
-              </div>
+          <div class="below-600 mt-5 mb-5 mx-auto d-flex "
+            style="justify-content: center;max-width: 700px;flex-wrap: wrap;flex-direction: column;">
+            <div style="width: 200px;" class="mx-auto">
+              <a href="https://cars24.com/" target="_blank"><img src="images/cars-24.jpg" style="height:40px"
+                  class="mt-4" /></a>
             </div>
-
-
-            <div class="d-flex mb-1">
-              <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center">
-                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">1</div>
-                <div class="line h-100"></div>
-              </div>
-              <div class="w-100 st-l">
-                <h5 class="text-dark">Choose Plan <br />Team size</h5>
-                <p class="lead text-muted pb-3"></p>
-
-              </div>
+            <div style="width: 200px;" class="mx-auto">
+              <a href="https://isonxperiences.com/" target="_blank"><img src="images/ison.jpg" style="height:40px"
+                  class="mt-5" /></a>
             </div>
-
-
-            <div class="d-flex mb-1">
-
-              <div class="w-100 st-r">
-                <h5 class="text-dark">Day 1</h5>
-                <p class="lead text-muted pb-3">Onboarding call</p>
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center">
-                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">2</div>
-                <div class="line h-100"></div>
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
-              </div>
+            <div style="width: 200px;" class="mx-auto">
+              <a href="https://ciitizen.com" target="_blank"><img src="images/ciitizen.jpg" style="height:40px"
+                  class="mt-4" /></a>
             </div>
-
-
-
-
-
-            <div class="d-flex mb-1">
-              <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center">
-                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">3</div>
-                <div class="line h-100"></div>
-              </div>
-              <div class="w-100 st-l">
-                <h5 class="text-dark">Week 1</h5>
-                <p class="lead text-muted pb-3">Scope document</p>
-              </div>
-            </div>
-
-
-            <div class="d-flex mb-1">
-
-              <div class="w-100 st-r">
-                <h5 class="text-dark">Week 2-6</h5>
-                <p class="lead text-muted pb-3">SaaS MVP version 1</p>
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center">
-                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">4</div>
-                <div class="line h-100"></div>
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
-              </div>
-            </div>
-
-            <div class="d-flex mb-1">
-              <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center">
-                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">5</div>
-                <div class="line h-100"></div>
-              </div>
-              <div class="w-100 st-l">
-                <h5 class="text-dark">Week 7-8</h5>
-                <p class="lead text-muted pb-3">Feedback / iterations</p>
-              </div>
-            </div>
-
-
-            <div class="d-flex mb-1">
-
-              <div class="w-100 st-r">
-                <h5 class="text-dark">Week 9-10 onwards</h5>
-                <p class="lead text-muted pb-3">Start using your custom SaaS product</p>
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center">
-                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">6</div>
-                <div class="line h-100"></div>
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
-              </div>
-            </div>
-
-            <div class="d-flex mb-1">
-              <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
-              </div>
-              <div class="d-flex flex-column pr-4 align-items-center">
-                <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">7</div>
-                <div class="line h-100"></div>
-              </div>
-              <div class="w-100 st-l">
-                <h5 class="text-dark">Week> 10</h5>
-                <p class="lead text-muted pb-3">Work with your team to evolve your SaaS app to meet your need</p>
-              </div>
-            </div>
-
-
-
-
-
-
-
-
           </div>
 
+          <div class="mt-5">
+            <h2 class="base-sec-heading mt-5 pt-5" id="howitworks">How it works</h2>
+            <div class="stepper d-flex flex-column mt-5 ml-2">
 
+
+
+              <div class="d-flex mb-1">
+                <div class="d-flex flex-column pr-4 align-items-center w-100">
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="line h-100"></div>
+                </div>
+                <div class="w-100">
+                  <h5 class="text-dark"></h5>
+                  <p class="lead text-muted pb-3" style="height:20px"></p>
+                </div>
+              </div>
+
+
+              <div class="d-flex mb-1">
+                <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">1</div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="w-100 st-l">
+                  <h5 class="text-dark">Choose Plan <br />Team size</h5>
+                  <p class="display-3 lead text-muted pb-3"></p>
+
+                </div>
+              </div>
+
+
+              <div class="d-flex mb-1">
+
+                <div class="w-100 st-r">
+                  <h5 class="text-dark">Day 1</h5>
+                  <p class="lead text-muted pb-3">Onboarding call</p>
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">2</div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
+                </div>
+              </div>
+
+
+
+
+
+              <div class="d-flex mb-1">
+                <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">3</div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="w-100 st-l">
+                  <h5 class="text-dark">Week 1</h5>
+                  <p class="lead text-muted pb-3">Scope document</p>
+                </div>
+              </div>
+
+
+              <div class="d-flex mb-1">
+
+                <div class="w-100 st-r">
+                  <h5 class="text-dark">Week 2-6</h5>
+                  <p class="lead text-muted pb-3">SaaS MVP version 1</p>
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">4</div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
+                </div>
+              </div>
+
+              <div class="d-flex mb-1">
+                <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">5</div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="w-100 st-l">
+                  <h5 class="text-dark">Week 7-8</h5>
+                  <p class="lead text-muted pb-3">Feedback / iterations</p>
+                </div>
+              </div>
+
+
+              <div class="d-flex mb-1">
+
+                <div class="w-100 st-r">
+                  <h5 class="text-dark">Week 9-10 onwards</h5>
+                  <p class="lead text-muted pb-3">Start using your custom SaaS product</p>
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">6</div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center w-100 st-l">
+                </div>
+              </div>
+
+              <div class="d-flex mb-1">
+                <div class="d-flex flex-column pr-4 align-items-center w-100 st-r">
+                </div>
+                <div class="d-flex flex-column pr-4 align-items-center">
+                  <div class="rounded-circle py-2 px-3 bg-step text-white mb-1">7</div>
+                  <div class="line h-100"></div>
+                </div>
+                <div class="w-100 st-l">
+                  <h5 class="text-dark">Week > 10</h5>
+                  <p class="lead text-muted pb-3">Work with your team to evolve your SaaS app to meet your need</p>
+                </div>
+              </div>
+
+
+
+
+
+
+
+
+            </div>
+
+          </div>
 
 
 
@@ -733,9 +523,9 @@
     <div style="background-color: #fafafa;" class="background-img-l pb-4">
       <div class="container py-3 mt-4 pt-4">
         <div class="pricing-header p-3 pb-md-4 mx-auto text-center pt-4">
-          <h2 class="display-4  base-sec-heading">Our Technology Stack</h2>
-          <p class="pt-4 fs-5 text-muted base-light-font">
-            We work with a robust open source technology stack couple with industry leading cloud services
+          <h2 class="  base-sec-heading">Our Technology Stack</h2>
+          <p class="pt-4  text-muted " style="font-size: 26px;font-weight: 100;">
+            We work with a robust open source technology stack <br />coupled with industry leading cloud services
           </p>
         </div>
       </div>
@@ -987,10 +777,11 @@
 
 
 
-    <div style="background-color: #fafafa;" class="pt-4">
-      <div class="container py-3 ">
+    <div style="background-color: #fafafa;" class="pt-3">
+      <div class="container py-1 ">
         <footer>
-          <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 ">
+          <div class="d-flex flex-column flex-md-row  pb-3  "
+            style="align-items: stretch;">
             <div class="footer-mob">
 
               <div style="display: flex; " class="footer-logos">
@@ -1007,15 +798,19 @@
                 </div>
               </div>
 
-              <div class="mt-4" style="opacity: 80%;">
-                2021 Glue Labs Private Limited. All rights reserved.
+              <div class="mt-4" style="opacity: 80%;font-size: 14px;font-weight: 100;">
+                Copyright &copy; 2021 Glue Labs Private
+                Limited. All rights reserved.
               </div>
             </div>
 
 
-            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto" style="display: flex;align-items: center;">
-              <a class="me-3 " href="#"><img src="images/linkedin.svg" /></a>
-              <a class="py-2 text-dark text-decoration-none" href="#"><img src="images/./twitter.svg" /></a>
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-sm-auto"
+              style="display: flex;align-items: flex-end;justify-content: center;">
+              <div style="height:24px;">
+              <a class="me-3 " href="https://www.linkedin.com/company/gluelabs-com"><img src="images/linkedin.svg" /></a>
+              <a class="py-2 text-dark text-decoration-none" style="margin-top: 40px;" href="https://twitter.com/isGlue"><img src="images/./twitter.svg" /></a>
+            </div>
             </nav>
           </div>
         </footer>
